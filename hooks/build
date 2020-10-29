@@ -10,7 +10,7 @@ echo "Build hook running"
 docker build \
              --file "${DOCKERFILE_PATH}"\
              --build-arg QEMU_ARCH=$([ "${BUILD_ARCH}" == "armhf" ] && echo "${BUILD_ARCH::-2}" || ([ "${BUILD_ARCH}" == "arm64" ] && echo "aarch64") || echo "0") \
-             --build-arg IMAGE_ARCH=$([ "${BUILD_ARCH}" == "armhf" ] && echo "arm32v7/debian:stretch" || ([ "${BUILD_ARCH}" == "arm64" ] && echo "arm64v8/debian:stretch") || echo "debian:stretch") \
+             --build-arg IMAGE_ARCH=$([ "${BUILD_ARCH}" == "armhf" ] && echo "arm32v7/debian:buster" || ([ "${BUILD_ARCH}" == "arm64" ] && echo "arm64v8/debian:buster") || echo "debian:buster") \
              --build-arg ARCH=${DOCKER_TAG} \
              --tag "${IMAGE_NAME}" \
              .
