@@ -1,9 +1,9 @@
 # Base image can be specified by --build-arg IMAGE_ARCH= ; defaults to debian:stretch
-ARG IMAGE_ARCH=debian:stretch
+ARG IMAGE_ARCH=debian:buster
 FROM ${IMAGE_ARCH}
 
 ENV DEBIAN_FRONTEND=noninteractive
-ARG VERSION=2.4.12
+ARG VERSION=2.4.13
 ENV VERSION ${VERSION}
 ARG ARCH=amd64
 ARG QEMU_ARCH
