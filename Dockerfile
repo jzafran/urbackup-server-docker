@@ -1,5 +1,5 @@
 # Base image can be specified by --build-arg IMAGE_ARCH= ; defaults to debian:stretch
-ARG IMAGE_ARCH=debian:stretch
+ARG IMAGE_ARCH=debian:buster
 FROM ${IMAGE_ARCH}
 
 ENV DEBIAN_FRONTEND=noninteractive
